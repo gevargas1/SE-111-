@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Gerson Vargas">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Birthday Party Registration Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #000;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 6px;
+            vertical-align: top;
+        }
+
+        thead th {
+            background-color: #eaeaee;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #fdf5e6;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        input[type="submit"] {
+            padding: 6px 12px;
+            margin-top: 6px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Birthday Party Registration Form</h1>
+
+    <form action="confirm.html" method="get">
+        <!--Start of Table-->
+        <table>
+            <thead>
+                <tr>
+                    <th>Labels</th>
+                    <th>Form Fields</th>
+                </tr>
+            </thead>
+            <!--Parent/Child info-->
+            <tbody>
+                <tr>
+                    <td><label for="parentFirst">Parent/Guardian Name</label> </td>
+                    <td>
+                        <input type="text" id="parentFirst" name="parentFirst" placeholder="First Name" required>
+                        <input type="text" id="parentLast" name="parentLast" placeholder="Last Name" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="childName">Child's First Name</label></td>
+                    <td><input type="text" id="childName" name="childName" placeholder="Child's First Name" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="childAge">Child's Age</label></td>
+                    <td><input type="number" id="childAge" name="childAge" min="1" max="18" required></td>
+                </tr>
+
+                <!--Date and Time-->
+                <tr>
+                    <th colspan="2">Date and Time</th>
+                </tr>
+
+                <tr>
+                    <td><label for="date">Date</label></td>
+                    <td><input type="date" id="date" name="date" required></td>
+                </tr>
+
+                <tr>
+                    <td><label for="startTime">Start Time</label></td>
+                    <td><input type="time" id="startTime" name="startTime" required></td>
+                </tr>
+
+                <tr>
+                    <td><label for="numGuests">Number of Guests</label></td>
+                    <td><input type="number" id="numGuests" name="numGuests" min="1" max="50" required></td>
+                </tr>
+
+                <!--Food-->
+                <tr>
+                    <th colspan="2">Food</th>
+                </tr>
+
+                <tr>
+                    <td>Size</td>
+                    <td>
+                        <input type="radio" id="sizeSm" name="size" value="small" required>
+                        <label for="sizeSm">sm</label>
+                        <input type="radio" id="sizeMed" name="size" value="medium">
+                        <label for="sizeMed">med</label>
+                        <input type="radio" id="sizeLg" name="size" value="large">
+                        <label for="sizeLg">lg</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Drinks</td>
+                    <td>
+                        <input type="checkbox" id="drinkCoke" name="drinks" value="Coke">
+                        <label for="drinkCoke">Coke</label><br>
+                        <input type="checkbox" id="drinkSprite" name="drinks" value="Sprite">
+                        <label for="drinkSprite">Sprite</label><br>
+                        <input type="checkbox" id="drinkPunch" name="drinks" value="Punch">
+                        <label for="drinkPunch">Punch</label><br>
+                        <input type="checkbox" id="drinkLemonade" name="drinks" value="Lemonade">
+                        <label for="drinkLemonade">Lemonade</label><br>
+                        <input type="checkbox" id="drinkTea" name="drinks" value="Iced Tea">
+                        <label for="drinkTea">Iced Tea</label><br>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="cake">Cake</label></td>
+                    <td>
+                        <select id="cake" name="cake" required>
+                            <option value="Chocolate">Chocolate</option>
+                            <option value="Vanilla">Vanilla</option>
+                            <option value="Marble">Marble</option>
+                            <option value="Bring my own">I'll bring my own</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <!--Decorations-->
+                <tr>
+                    <th colspan="2">Decorations</th>
+                </tr>
+
+                <tr>
+                    <td><label for="colorScheme">Color Scheme</label></td>
+                    <td>
+                        <input type="color" id="colorScheme" name="colorScheme" value="#000000">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="comments">Additional Comments</label></td>
+                    <td>
+                        <textarea id="comments" name="comments" rows="3" cols="35"
+                            placeholder="Please add any additional comments"></textarea>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="submit"></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</body>
+
+</html>
